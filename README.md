@@ -1,75 +1,88 @@
 # E-VISTA
-### Educational Video Insight, Search, Translation & Abstraction
+<p align="center"><img src="./assets/project-banner.svg" alt="E-VISTA — AI-powered educational video learning" width="100%"/></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/Frontend-React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/React-Frontend-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
   <img src="https://img.shields.io/badge/AI-Gemini%20%2B%20Whisper-8E75B2?style=for-the-badge" alt="AI stack"/>
 </p>
 
-**E-VISTA** is an educational video learning platform designed to help learners get more value from online lectures. It combines video discovery, speech transcription and AI-assisted learning tools in one workflow.
+<p align="center"><b>Discover. Understand. Revise.</b><br/>An AI-assisted learning workspace that turns educational videos into useful study material.</p>
 
-## ✨ What it does
+## ✨ Project overview
+E-VISTA (Educational Video Insight, Search, Translation & Abstraction) helps learners move from watching a lecture to actively understanding and revising its content. It brings video discovery, transcription and AI-powered study tools into one workflow.
 
-- 🔎 Search for educational YouTube videos by topic.
-- 🎙️ Transcribe video audio locally using OpenAI Whisper.
-- 📝 Generate AI-assisted summaries with Gemini.
-- 🌐 Translate learning content.
-- 🧠 Create quizzes and flashcards for revision.
-- 💬 Ask questions about learning content.
-- 📈 Track learning progress through a dashboard.
+## 🚀 Key features
+| Feature | What it helps you do |
+|---|---|
+| 🔎 Video discovery | Find educational YouTube videos by topic |
+| 🎙️ Speech transcription | Convert video audio into text with Whisper |
+| 🧠 AI summaries | Get concise learning summaries with Gemini |
+| 🌐 Translation | Make learning content easier to access |
+| 📝 Quiz & flashcards | Practise and revise important concepts |
+| 💬 Content Q&A | Ask questions about the learning material |
+| 📊 Learning dashboard | Review learning activity and progress |
 
-## 🧱 Technology
+## 🧩 How it works
+```mermaid
+flowchart LR
+    A[Search educational topic] --> B[Select video]
+    B --> C[Audio transcription]
+    C --> D[AI processing]
+    D --> E[Summary]
+    D --> F[Translation]
+    D --> G[Quiz and flashcards]
+    D --> H[Ask questions]
+    E --> I[Learning workspace]
+    F --> I
+    G --> I
+    H --> I
+```
 
-| Layer | Technologies |
+## 🛠️ Technology stack
+| Layer | Tools |
 |---|---|
 | Frontend | React, Tailwind CSS |
 | Backend | Python, FastAPI |
-| Speech transcription | Whisper |
+| Speech-to-text | OpenAI Whisper |
 | Generative AI | Google Gemini |
 | Database | SQLite |
 
-## ▶️ Run locally
-
-The application source and full setup instructions are in the project folder:
-
-**[Open the evista-2 project and setup guide](./evista-2/README.md)**
-
-Quick start (macOS / Linux):
+## ⚡ Run locally
+See the detailed setup guide in **[evista-2/README.md](./evista-2/README.md)**.
 
 ```bash
-cd evista-2/backend
+git clone https://github.com/likhithds1si23cs099-bit/Evista.git
+cd Evista/evista-2/backend
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Add your Gemini API key to `.env`, then start the backend:
+Add your Gemini API key to the local `.env` file, then start the backend:
 
 ```bash
 uvicorn main:app --reload --port 8000
 ```
 
-Open http://localhost:8000 in your browser. See the [full README](./evista-2/README.md) for Windows instructions, configuration and troubleshooting.
+Open **http://localhost:8000**. Refer to the detailed guide for configuration, frontend startup and troubleshooting.
 
-## 📁 Repository structure
-
+## 📂 Repository layout
 ```text
 Evista/
-└── evista-2/
-    ├── backend/
-    ├── .vscode/
-    └── README.md
+├── evista-2/
+│   ├── backend/
+│   ├── .vscode/
+│   └── README.md
+└── README.md
 ```
 
 ## 🔐 Security
-
-- Keep API keys in your local `.env` file.
-- Never commit secrets or credentials.
-- Use `.env.example` to document required environment variables without exposing values.
+- Store API keys in your local `.env` file.
+- Never commit secrets, credentials or private tokens.
+- Keep `.env.example` limited to variable names and safe placeholders.
 
 ---
-
-<p align="center">Built to make learning from educational videos more interactive and accessible.</p>
+<p align="center"><b>Built to make learning from educational videos more interactive and accessible.</b></p>
