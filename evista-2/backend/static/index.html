@@ -45,6 +45,33 @@ iframe{border:1px solid rgba(99,102,241,.16);box-shadow:0 16px 40px rgba(31,41,8
 @keyframes evistaIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:640px){header .max-w-6xl{gap:.55rem}header h1{width:100%;margin:0!important}.bg-white{padding:1rem}}
 
+
+/* E-VISTA visual polish — motion, depth and responsive surfaces */
+html{scroll-behavior:smooth}
+body{background-attachment:fixed}
+#root{isolation:isolate}
+header{position:sticky;top:0;z-index:40}
+header .max-w-6xl{padding-top:.8rem!important;padding-bottom:.8rem!important}
+main{max-width:1180px!important;padding-top:2rem!important;padding-bottom:4rem!important}
+main h2,main h3{letter-spacing:-.035em}
+main h2{font-size:clamp(1.35rem,2.5vw,2rem)!important}
+main .bg-white{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+main .bg-white:hover{border-color:rgba(99,102,241,.24);box-shadow:0 18px 44px rgba(44,57,110,.12)!important}
+main button{box-shadow:0 5px 14px rgba(79,70,229,.12)}
+main button:active{transform:translateY(0) scale(.98)}
+main input,main textarea,main select{border-radius:12px!important;min-height:42px}
+main textarea{line-height:1.65!important}
+main iframe{border-radius:18px!important;overflow:hidden}
+main img{border-radius:12px}
+main pre{background:#f7f8ff;border:1px solid #e4e9f5;border-radius:14px;padding:16px;color:#26324b}
+main .md h1,main .md h2,main .md h3{color:#18264a}
+main .md blockquote{border-left:4px solid #818cf8;padding:.6rem 1rem;background:#f3f5ff;border-radius:0 12px 12px 0}
+main .md table{width:100%;border-collapse:collapse}
+main .md th,main .md td{border:1px solid #e4e9f5;padding:.55rem;text-align:left}
+main .md th{background:#f0f3ff}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media(max-width:640px){main{padding:1rem!important}main .grid{gap:.8rem!important}header button{font-size:.78rem!important;padding:.45rem .65rem!important}}
+
 </style>
 </head>
 <body>
